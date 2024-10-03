@@ -2,26 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: aliceblue;
+  color: black;
+  font-family: "Open Sans", sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.movie {
+  filter: grayscale(100%);
+  border-radius: 20px;
+}
+
+.item {
+  background: rgb(195, 34, 83);
+  background: linear-gradient(
+    340deg,
+    rgba(95, 34, 83, 1) 0%,
+    rgb(5, 30, 84) 100%
+  );
+  height: 400px;
+  width: 250px;
+  border-radius: 20px;
+  padding: 18px;
+  color: white;
+}
+
+.item h1{
+  margin-bottom: 20px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.item p{
+  color: rgb(197, 197, 197);
+}
+
+@media (max-width: 768px) {
+  .nav{
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+  }
+  .more{
+    margin-left: 13%;
+    flex-direction: column;
+  }
+  .address{
+    text-align: center;
+    flex-direction: column;
+  }
+  .address input, button{
+    width: 70%;
+    margin-left: 13%;
+  }
+  .footer{
+    flex-direction: column;
+    margin-left: 13%;
+    gap: 0px;
+    margin-bottom: 20px;
   }
 }
